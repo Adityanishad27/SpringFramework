@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+         http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+      <!--  
+        <bean  class="com.AmbiguityProblem.Addition" name="Addition">
+        
+        <constructor-arg value="2"/>
+        <constructor-arg value="3"/>
+        
+        </bean>
+        -->  
+
+ <!-- Call the Constructor  by type  -->
+ <!--  
+<bean  class="com.AmbiguityProblem.Addition" name="Addition">
+        
+        <constructor-arg value="2"  type="int"/>
+        <constructor-arg value="3"  type="int "/>
+        </bean>
+
+-->
+<!--  value changed A =B,, B=A     Value Changed A replace to B  and B replace to A -->
+
+
+<bean  class="com.AmbiguityProblem.Addition" name="Addition">
+        
+        <constructor-arg value="2"  type="int"  index="1"/>
+        <constructor-arg value="3"  type="int"  index="0"/>
+        </bean>
+        
+        
+
+
+</beans>
